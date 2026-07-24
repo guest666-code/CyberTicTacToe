@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+body {
+  background: #0f111a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 15px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #00f3ff;
+  text-shadow: 0 0 10px #00f3ff, 0 0 20px #00f3ff;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 20px;
+}
+
+.online-group {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  background: #1a1d2e;
+  color: #00f3ff;
+  border: 2px solid #00f3ff;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.1s ease-in-out;
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.96);
+  background: #00f3ff;
+  color: #0f111a;
+  box-shadow: 0 0 12px #00f3ff;
+}
+
+input {
+  background: #1a1d2e;
+  border: 2px solid #ff0055;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus {
+  box-shadow: 0 0 10px #ff0055;
+}
+
+.status {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #ff0055;
+  height: 28px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(255, 0, 85, 0.6);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1;
+}
+
+.cell {
+  background: #1a1d2e;
+  border: 2px solid #2a2e45;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.cell:active {
+  transform: scale(0.95);
+}
+
+.cell.X {
+  color: #00f3ff;
+  text-shadow: 0 0 10px #00f3ff, 0 0 20px #00f3ff;
+  border-color: #00f3ff;
+}
+
+.cell.O {
+  color: #ff0055;
+  text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055;
+  border-color: #ff0055;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Nexus Tac-Toe</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+<body>
+
+  <h1>NEXUS TAC-TOE</h1>
+  
+  <div class="menu">
+    <button onclick="startLocalMode()">Local Co-op (Aynı Ekran)</button>
+    <button onclick="createOnlineRoom()">Oda Kur (Online)</button>
+    <div class="online-group">
+      <input type="text" id="roomInput" placeholder="KOD" maxlength="4">
+      <button onclick="joinOnlineRoom()" style="white-space: nowrap;">Katıl</button>
+    </div>
+  </div>
+
+  <div class="status" id="statusText">Mod Seçiniz</div>
+
+  <div class="board" id="board">
+    <div class="cell" onclick="cellClicked(0)"></div>
+    <div class="cell" onclick="cellClicked(1)"></div>
+    <div class="cell" onclick="cellClicked(2)"></div>
+    <div class="cell" onclick="cellClicked(3)"></div>
+    <div class="cell" onclick="cellClicked(4)"></div>
+    <div class="cell" onclick="cellClicked(5)"></div>
+    <div class="cell" onclick="cellClicked(6)"></div>
+    <div class="cell" onclick="cellClicked(7)"></div>
+    <div class="cell" onclick="cellClicked(8)"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
